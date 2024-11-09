@@ -35,6 +35,7 @@ Vectorization: Using CountVectorizer, the processed text data is transformed int
 ## Recommendation Logic
 **Similar Courses**
 For each searched course, a similarity index is calculated using cosine similarity on the vectorized text features. The system then retrieves the top similar courses based on this similarity score.
+
 **Personalized Recommendations**
 A user vector is initialized and updated with each search to track the user's course preferences.
 Each course search creates a list of similar courses, forming a retrieval list. Recommendations are refined by calculating the dot product of the user vector with courses in the retrieval list, resulting in personalized suggestions.

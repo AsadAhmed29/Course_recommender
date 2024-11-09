@@ -20,11 +20,21 @@ The project workflow is as follows:
    - Updates a user vector to track and personalize recommendations based on search history.
 
 
-##Running the Project
+## Running the Project
 Clone this repository and navigate to the project directory.
 
 Run the Streamlit application with the following command:
-
-
 streamlit run app.py
 Once the app is running, it will open in a web browser. Use the sidebar to explore recommendations or view visualizations.
+
+## Data Preprocessing
+One-Hot Encoding: The dataset contains categorical features (organization, course time, and difficulty) which are one-hot encoded.
+Text Processing: The text fields (course_summary, course_description, course_skills) are cleaned, tokenized, and stemmed. The course_summary field is further processed to create a text vector.
+Vectorization: Using CountVectorizer, the processed text data is transformed into a numerical format for similarity computations.
+
+## Recommendation Logic
+**Similar Courses**
+For each searched course, a similarity index is calculated using cosine similarity on the vectorized text features. The system then retrieves the top similar courses based on this similarity score.
+**Personalized Recommendations**
+A user vector is initialized and updated with each search to track the user's course preferences.
+Each course search creates a list of similar courses, forming a retrieval list. Recommendations are refined by calculating the dot product of the user vector with courses in the retrieval list, resulting in personalized suggestions.

@@ -24,12 +24,16 @@ The project workflow is as follows:
 Clone this repository and navigate to the project directory.
 
 Run the Streamlit application with the following command:
+
 streamlit run app.py
+
 Once the app is running, it will open in a web browser. Use the sidebar to explore recommendations or view visualizations.
 
 ## Data Preprocessing
 One-Hot Encoding: The dataset contains categorical features (organization, course time, and difficulty) which are one-hot encoded.
+
 Text Processing: The text fields (course_summary, course_description, course_skills) are cleaned, tokenized, and stemmed. The course_summary field is further processed to create a text vector.
+
 Vectorization: Using CountVectorizer, the processed text data is transformed into a numerical format for similarity computations.
 
 ## Recommendation Logic

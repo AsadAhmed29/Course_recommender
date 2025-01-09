@@ -5,7 +5,7 @@ import numpy as np
 import streamlit as st
 from googletrans import Translator
 import nltk
-nltk.download('punkt')
+nltk.download('punkt' , quiet = True)
 #st.set_option('deprecation.showPyplotGlobalUse', False)
 ####################
 #DATA_PREPROCESSING#

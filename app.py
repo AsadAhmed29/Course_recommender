@@ -6,6 +6,7 @@ import streamlit as st
 from googletrans import Translator
 import nltk
 nltk.download('punkt' , quiet = True)
+nltk.download('punkt_tab')
 #st.set_option('deprecation.showPyplotGlobalUse', False)
 ####################
 #DATA_PREPROCESSING#

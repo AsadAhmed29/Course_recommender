@@ -10,7 +10,7 @@ nltk.download('punkt')
 ####################
 #DATA_PREPROCESSING#
 ####################
-df = pd.read_csv('/content/coursera_courses.csv')
+df = pd.read_csv('coursera_courses.csv')
 df = df.drop(['course_students_enrolled', 'course_url'], axis=1)
 df = df.dropna()
 df = df.reset_index(drop = True)
